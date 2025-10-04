@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2kwoblext7w1"]
+
+[ext_resource type="Texture2D" uid="uid://d4evbn810g5k7" path="res://Farm RPG FREE 16x16 - Tiny Asset Pack/Objects/Rnadom/20240707dragonHeaderA.png" id="1_hhabf"]
+
+[node name="hud" type="CanvasLayer"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(163.625, 67.499985)
+scale = Vector2(2.2213542, 2.53125)
+texture = ExtResource("1_hhabf")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 148.0
+offset_top = 37.0
+offset_right = 208.0
+offset_bottom = 79.0
+theme_override_font_sizes/font_size = 30
+text = "0"

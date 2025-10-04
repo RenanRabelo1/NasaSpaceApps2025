@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=3 uid="uid://c72dtbokrg3un"]
+
+[ext_resource type="Texture2D" uid="uid://cytx280ho1tpn" path="res://Farm RPG FREE 16x16 - Tiny Asset Pack/Objects/Jaguaribara.png" id="1_agaw0"]
+[ext_resource type="PackedScene" uid="uid://dvcusl6bg6ium" path="res://Cena/character_body_2d.tscn" id="2_emad0"]
+[ext_resource type="PackedScene" uid="uid://braruwebv2kru" path="res://Cena/arvore.tscn" id="2_f3to1"]
+[ext_resource type="PackedScene" uid="uid://c2cv0java4uuk" path="res://Cena/milho.tscn" id="3_emad0"]
+[ext_resource type="PackedScene" uid="uid://c2kwoblext7w1" path="res://Cena/hud.tscn" id="4_vb6qe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f3to1"]
+size = Vector2(68, 53)
+
+[node name="Jaguaribara" type="Node"]
+
+[node name="Jaguaribara" type="Sprite2D" parent="."]
+position = Vector2(-4.351139e-05, 4.529953e-06)
+scale = Vector2(1.2757475, 0.9310345)
+texture = ExtResource("1_agaw0")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="milho" parent="." instance=ExtResource("3_emad0")]
+position = Vector2(-143, 148)
+
+[node name="milho2" parent="." instance=ExtResource("3_emad0")]
+position = Vector2(-142, 196)
+
+[node name="arvore" parent="." instance=ExtResource("2_f3to1")]
+position = Vector2(-18, 14)
+
+[node name="arvore2" parent="." instance=ExtResource("2_f3to1")]
+position = Vector2(-45, -222)
+
+[node name="arvore3" parent="." instance=ExtResource("2_f3to1")]
+position = Vector2(-180, -218)
+
+[node name="arvore4" parent="." instance=ExtResource("2_f3to1")]
+position = Vector2(-390, -224)
+
+[node name="arvore5" parent="." instance=ExtResource("2_f3to1")]
+position = Vector2(-535, -204)
+
+[node name="arvore6" parent="." instance=ExtResource("2_f3to1")]
+position = Vector2(-548, -98)
+
+[node name="arvore7" parent="." instance=ExtResource("2_f3to1")]
+position = Vector2(-535, 25)
+
+[node name="arvore8" parent="." instance=ExtResource("2_f3to1")]
+position = Vector2(-3, -91)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-143, 148)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(389, -284)
+shape = SubResource("RectangleShape2D_f3to1")
+
+[node name="hud" parent="." instance=ExtResource("4_vb6qe")]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_emad0")]
+position = Vector2(-62, -37)

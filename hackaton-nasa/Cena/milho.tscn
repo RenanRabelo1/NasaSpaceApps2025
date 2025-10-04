@@ -1,0 +1,72 @@
+[gd_scene load_steps=11 format=3 uid="uid://c2cv0java4uuk"]
+
+[ext_resource type="Script" uid="uid://co81h83rx847b" path="res://Cena/milho.gd" id="1_hiw7e"]
+[ext_resource type="Texture2D" uid="uid://c76pee6kaplb7" path="res://Farm RPG FREE 16x16 - Tiny Asset Pack/Objects/SAMPLE - Pixel Gnome Crop Pack - All.png" id="1_xxtdm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hiw7e"]
+atlas = ExtResource("1_xxtdm")
+region = Rect2(0, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1i5ke"]
+atlas = ExtResource("1_xxtdm")
+region = Rect2(16, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yyfk8"]
+atlas = ExtResource("1_xxtdm")
+region = Rect2(32, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vqwm"]
+atlas = ExtResource("1_xxtdm")
+region = Rect2(48, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3htgf"]
+atlas = ExtResource("1_xxtdm")
+region = Rect2(80, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_onptl"]
+atlas = ExtResource("1_xxtdm")
+region = Rect2(64, 32, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ytdba"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hiw7e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1i5ke")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yyfk8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5vqwm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3htgf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_onptl")
+}],
+"loop": false,
+"name": &"trigo_crescendo",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xxtdm"]
+radius = 15.0
+
+[node name="milho" type="Area2D"]
+script = ExtResource("1_hiw7e")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(12.5, -2)
+scale = Vector2(2.5625, 1.9375)
+sprite_frames = SubResource("SpriteFrames_ytdba")
+animation = &"trigo_crescendo"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(12, 12)
+shape = SubResource("CircleShape2D_xxtdm")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
