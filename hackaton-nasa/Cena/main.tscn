@@ -3230,7 +3230,7 @@ tile_set = SubResource("TileSet_u1akp")
 position = Vector2(452, 448)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_u1akp")]
-position = Vector2(-27, -98)
+position = Vector2(106, 123)
 scale = Vector2(0.5, 0.5)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]

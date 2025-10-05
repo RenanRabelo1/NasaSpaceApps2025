@@ -13,6 +13,7 @@ config_version=5
 config/name="HackatonNasa"
 run/main_scene="uid://cdyo1pe1x4k07"
 config/features=PackedStringArray("4.5", "Forward Plus")
+boot_splash/bg_color=Color(0.9764706, 0.8509804, 0.47843137, 1)
 config/icon="res://icon.svg"
 
 [input]
@@ -46,3 +47,4 @@ interact={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+environment/defaults/default_clear_color=Color(0.9764706, 0.8509804, 0.47843137, 1)

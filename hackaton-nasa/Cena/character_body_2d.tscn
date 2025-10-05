@@ -321,6 +321,10 @@ one_shot = true
 wait_time = 2.0
 one_shot = true
 
+[node name="cooldownrealmente" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
 [node name="vouusarplantiodireto" type="Label" parent="."]
 visible = false
 offset_left = 86.0
@@ -364,6 +368,17 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 26
 text = "Vamos usar enxada
  ou plantio direto?"
+
+[node name="realmenteemelhor" type="Label" parent="."]
+visible = false
+offset_left = 42.0
+offset_top = -45.0
+offset_right = 438.0
+offset_bottom = 51.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Realmente é melhor escolher
+adubo orgânico"
 
 [node name="qualadubodevousar" type="Label" parent="."]
 visible = false
@@ -549,10 +564,12 @@ text = "CONTINUAR JOGANDO"
 [connection signal="timeout" from="cooldown2" to="." method="_on_cooldown_2_timeout"]
 [connection signal="timeout" from="cooldownplantio" to="." method="_on_cooldownplantio_timeout"]
 [connection signal="timeout" from="cooldownadubo" to="." method="_on_cooldownadubo_timeout"]
+[connection signal="timeout" from="cooldownrealmente" to="." method="_on_cooldownrealmente_timeout"]
 [connection signal="pressed" from="Plantio direto" to="." method="_on_plantio_direto_pressed"]
 [connection signal="pressed" from="Enxada" to="." method="_on_enxada_pressed"]
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="pressed" from="explicacao_adubo/agrotoxico" to="." method="_on_agrotoxico_pressed"]
+[connection signal="pressed" from="explicacao_adubo/organico" to="." method="_on_organico_pressed"]
 [connection signal="pressed" from="explicacao_adubo/quimico" to="." method="_on_quimico_pressed"]
 [connection signal="pressed" from="explicacao_adubo/nenhum" to="." method="_on_nenhum_pressed"]
 [connection signal="pressed" from="explicacao_plantio_direto/Button" to="." method="_on_button_pressed"]

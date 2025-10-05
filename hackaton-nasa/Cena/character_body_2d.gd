@@ -99,3 +99,13 @@ func _on_quimico_pressed() -> void:
 func _on_nenhum_pressed() -> void:
 	$explicacao_adubo.hide()
 	$explicacao_errada.show()
+
+func _on_organico_pressed() -> void:
+	$explicacao_adubo.hide()
+	$realmenteemelhor.show()
+	$AnimatedSprite2D2.show()
+	$cooldownrealmente.start()
+
+func _on_cooldownrealmente_timeout() -> void:
+	$realmenteemelhor.hide()
+	$AnimatedSprite2D2.hide()
