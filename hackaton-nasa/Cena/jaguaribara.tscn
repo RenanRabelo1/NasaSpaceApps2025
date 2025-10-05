@@ -27,28 +27,22 @@ position = Vector2(-143, 148)
 position = Vector2(-142, 196)
 
 [node name="arvore" parent="." instance=ExtResource("2_f3to1")]
-position = Vector2(-18, 14)
+position = Vector2(-14, -9)
 
 [node name="arvore2" parent="." instance=ExtResource("2_f3to1")]
-position = Vector2(-45, -222)
+position = Vector2(33, 290)
 
 [node name="arvore3" parent="." instance=ExtResource("2_f3to1")]
-position = Vector2(-180, -218)
+position = Vector2(-32, 289)
 
 [node name="arvore4" parent="." instance=ExtResource("2_f3to1")]
-position = Vector2(-390, -224)
+position = Vector2(-43, 156)
 
 [node name="arvore5" parent="." instance=ExtResource("2_f3to1")]
-position = Vector2(-535, -204)
+position = Vector2(-296, 80)
 
 [node name="arvore6" parent="." instance=ExtResource("2_f3to1")]
-position = Vector2(-548, -98)
-
-[node name="arvore7" parent="." instance=ExtResource("2_f3to1")]
-position = Vector2(-535, 25)
-
-[node name="arvore8" parent="." instance=ExtResource("2_f3to1")]
-position = Vector2(-3, -91)
+position = Vector2(-290, 23)
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-143, 148)
@@ -57,7 +51,22 @@ position = Vector2(-143, 148)
 position = Vector2(389, -284)
 shape = SubResource("RectangleShape2D_f3to1")
 
-[node name="hud" parent="." instance=ExtResource("4_vb6qe")]
-
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_emad0")]
 position = Vector2(-70, -88)
+scale = Vector2(0.5, 0.5)
+
+[node name="hud" parent="CharacterBody2D" instance=ExtResource("4_vb6qe")]
+
+[connection signal="entrou" from="milho" to="." method="_on_milho_entrou"]
+[connection signal="entrou" from="arvore" to="." method="_on_arvore_entrou"]
+[connection signal="pressed" from="arvore" to="." method="_on_arvore_pressed"]
+[connection signal="entrou" from="arvore2" to="." method="_on_arvore_entrou"]
+[connection signal="pressed" from="arvore2" to="." method="_on_arvore_pressed"]
+[connection signal="entrou" from="arvore3" to="." method="_on_arvore_entrou"]
+[connection signal="pressed" from="arvore3" to="." method="_on_arvore_pressed"]
+[connection signal="entrou" from="arvore4" to="." method="_on_arvore_entrou"]
+[connection signal="pressed" from="arvore4" to="." method="_on_arvore_pressed"]
+[connection signal="entrou" from="arvore5" to="." method="_on_arvore_entrou"]
+[connection signal="pressed" from="arvore5" to="." method="_on_arvore_pressed"]
+[connection signal="entrou" from="arvore6" to="." method="_on_arvore_entrou"]
+[connection signal="pressed" from="arvore6" to="." method="_on_arvore_pressed"]

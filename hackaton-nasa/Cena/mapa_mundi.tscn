@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b8kkdjv5t0m14"]
 
 [ext_resource type="Script" uid="uid://dvvwh3nkmxwi0" path="res://Cena/mapa_mundi.gd" id="1_170cd"]
-[ext_resource type="Texture2D" uid="uid://d0j10y72ekb7m" path="res://Farm RPG FREE 16x16 - Tiny Asset Pack/Objects/HUD Inicial.png" id="2_170cd"]
+[ext_resource type="Texture2D" uid="uid://1dv24kd7p7e4" path="res://file_00000000fa7061f9943c7c348b8b2df5.png" id="2_170cd"]
 
 [node name="Mapa-Mundi" type="Node"]
 script = ExtResource("1_170cd")
@@ -11,19 +11,19 @@ position = Vector2(575, 336)
 scale = Vector2(1.1269531, 0.50390625)
 texture = ExtResource("2_170cd")
 
-[node name="Jaguaribaba" type="Button" parent="."]
-offset_left = 83.0
-offset_top = 367.0
-offset_right = 1068.0
-offset_bottom = 607.0
+[node name="Jaguaribara" type="Button" parent="."]
+offset_left = 89.0
+offset_top = 330.0
+offset_right = 1074.0
+offset_bottom = 570.0
 text = "
 "
 
 [node name="Fortaleza" type="Button" parent="."]
-offset_left = 86.0
-offset_top = 59.0
-offset_right = 1064.0
-offset_bottom = 353.0
+offset_left = 90.0
+offset_top = 22.0
+offset_right = 1068.0
+offset_bottom = 316.0
 
-[connection signal="pressed" from="Jaguaribaba" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Jaguaribara" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Fortaleza" to="." method="_on_fortaleza_pressed"]

@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-const SPEED = 200.0
+var SPEED = 200.0
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	# Get input direction for both axes
 	var direction_x := Input.get_axis("esquerda", "direita")
 	var direction_y := Input.get_axis("cima", "baixo")
@@ -31,6 +31,6 @@ func update_animations(direction_x: float, direction_y: float) -> void:
 
 
 
-func _on_area_2d_area_entered(area: Area2D) -> void:
+func _on_area_2d_area_entered(_area: Area2D) -> void:
 	$AnimatedSprite2D2.show()
 	$Label1.show()

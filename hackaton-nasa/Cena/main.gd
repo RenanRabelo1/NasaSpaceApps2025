@@ -8,7 +8,7 @@ func _ready() -> void:
 
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	map()
 
 func map():
@@ -17,14 +17,17 @@ func map():
 		$CharacterBody2D/Grafico/Fechar_Mapa.show()
 
 func _on_milho_entrou() -> void:
-	milho+=1
-	if (milho==1):
-		$CharacterBody2D/hud/Label.text=str(milho)
+	$CharacterBody2D/hud/ProgressBar.value += 10
 
 func _on_fechar_mapa_pressed() -> void:
 	$CharacterBody2D/Grafico.hide()
 	$CharacterBody2D/Grafico/Fechar_Mapa.hide()
 
 
-func _on_menu_body_entered(body: Node2D) -> void:
+func _on_menu_body_entered(_body: Node2D) -> void:
 	get_tree().change_scene_to_file("res://Cena/mapa_mundi.tscn")
+
+
+func _on_arvore_pressed() -> void:
+	$CharacterProgressBar.value+=10
+	

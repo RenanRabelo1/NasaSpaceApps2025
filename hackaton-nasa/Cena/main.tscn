@@ -1,14 +1,15 @@
-[gd_scene load_steps=14 format=3 uid="uid://cdyo1pe1x4k07"]
+[gd_scene load_steps=15 format=3 uid="uid://cdyo1pe1x4k07"]
 
 [ext_resource type="Script" uid="uid://bhgmap5nqdpce" path="res://Cena/main.gd" id="1_61g17"]
 [ext_resource type="Texture2D" uid="uid://mbkgv8wftafh" path="res://Farm RPG FREE 16x16 - Tiny Asset Pack/Tileset/Tileset Spring.png" id="1_rhtqi"]
-[ext_resource type="VideoStream" path="res://Farm RPG FREE 16x16 - Tiny Asset Pack/Objects/ImagemGIFundo.ogv" id="2_nnmrw"]
+[ext_resource type="VideoStream" uid="uid://drghtjjhhx3aw" path="res://Farm RPG FREE 16x16 - Tiny Asset Pack/Objects/ImagemGIFundo.ogv" id="2_nnmrw"]
 [ext_resource type="PackedScene" uid="uid://dvcusl6bg6ium" path="res://Cena/character_body_2d.tscn" id="2_u1akp"]
 [ext_resource type="Texture2D" uid="uid://c6da0l6n3ilp4" path="res://Farm RPG FREE 16x16 - Tiny Asset Pack/Objects/SAMPLE - Pixel Gnome Crop Pack - All x1000.png" id="3_skhdm"]
 [ext_resource type="PackedScene" uid="uid://c2cv0java4uuk" path="res://Cena/milho.tscn" id="5_l0jnj"]
 [ext_resource type="Texture2D" uid="uid://r5ehenqs0o1w" path="res://Farm RPG FREE 16x16 - Tiny Asset Pack/Objects/68c811c8c9414dfda07304d034ef40a4upfCaTNjkNlsZGqy-0.jpg" id="6_t8ub8"]
 [ext_resource type="PackedScene" uid="uid://c2kwoblext7w1" path="res://Cena/hud.tscn" id="8_j78um"]
 [ext_resource type="Texture2D" uid="uid://dp57fk40re0vx" path="res://Farm RPG FREE 16x16 - Tiny Asset Pack/Objects/Grafico.png" id="9_j78um"]
+[ext_resource type="PackedScene" uid="uid://braruwebv2kru" path="res://Cena/arvore.tscn" id="10_quusa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nnmrw"]
 texture = ExtResource("1_rhtqi")
@@ -3214,10 +3215,10 @@ position = Vector2(269, 253)
 texture = ExtResource("6_t8ub8")
 
 [node name="Fundo" type="VideoStreamPlayer" parent="."]
-offset_left = -579.0
-offset_top = -323.0
-offset_right = 1117.0
-offset_bottom = 829.0
+offset_left = -456.0
+offset_top = -261.0
+offset_right = 1240.0
+offset_bottom = 891.0
 stream = ExtResource("2_nnmrw")
 autoplay = true
 loop = true
@@ -3229,7 +3230,8 @@ tile_set = SubResource("TileSet_u1akp")
 position = Vector2(452, 448)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_u1akp")]
-position = Vector2(-215, -114)
+position = Vector2(-27, -98)
+scale = Vector2(0.5, 0.5)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(215, 115)
@@ -3258,6 +3260,10 @@ position = Vector2(-579, -323)
 position = Vector2(1374.5, 689)
 shape = SubResource("RectangleShape2D_j78um")
 
+[node name="arvore" parent="." instance=ExtResource("10_quusa")]
+position = Vector2(-373, 342)
+
 [connection signal="entrou" from="milho" to="." method="_on_milho_entrou"]
 [connection signal="pressed" from="CharacterBody2D/Grafico/Fechar_Mapa" to="." method="_on_fechar_mapa_pressed"]
 [connection signal="body_entered" from="Menu" to="." method="_on_menu_body_entered"]
+[connection signal="pressed" from="arvore" to="." method="_on_arvore_pressed"]
