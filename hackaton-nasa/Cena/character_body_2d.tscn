@@ -1,8 +1,9 @@
-[gd_scene load_steps=36 format=3 uid="uid://dvcusl6bg6ium"]
+[gd_scene load_steps=40 format=3 uid="uid://dvcusl6bg6ium"]
 
 [ext_resource type="Texture2D" uid="uid://cmdrxbjh6o3lw" path="res://Farm RPG FREE 16x16 - Tiny Asset Pack/Character/Idle.png" id="1_7e4c3"]
 [ext_resource type="Script" uid="uid://cu0s1ncw17203" path="res://Cena/character_body_2d.gd" id="1_tg0ah"]
 [ext_resource type="Texture2D" uid="uid://btw3jolul2q2w" path="res://Farm RPG FREE 16x16 - Tiny Asset Pack/Character/Walk.png" id="2_tg0ah"]
+[ext_resource type="Texture2D" uid="uid://dvhggwmf8dx2b" path="res://Farm RPG FREE 16x16 - Tiny Asset Pack/Objects/Chat BalloonsBubbles - Pixel Art/All.png" id="4_078p5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_078p5"]
 atlas = ExtResource("1_7e4c3")
@@ -238,18 +239,71 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7e4c3"]
-radius = 22.203604
+radius = 17.029387
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_05a31"]
+atlas = ExtResource("4_078p5")
+region = Rect2(510, 329, 51, 47)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d5d8f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_05a31")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_078p5"]
+radius = 16.124516
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_tg0ah")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(272.00003, 76.99999)
-scale = Vector2(1.8906248, 1.5859375)
+position = Vector2(333.1172, 123.1875)
+scale = Vector2(3.4301758, 2.5117185)
 sprite_frames = SubResource("SpriteFrames_w5xs3")
 animation = &"lado"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(274, 75)
+position = Vector2(337, 127)
 shape = SubResource("CircleShape2D_7e4c3")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(260, 103.00001)
+scale = Vector2(3.4829962, 3.5244348)
+sprite_frames = SubResource("SpriteFrames_d5d8f")
+
+[node name="Label1" type="Label" parent="."]
+offset_left = 192.0
+offset_top = 45.0
+offset_right = 325.0
+offset_bottom = 88.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 14
+text = "Vamos usar enxada
+ ou plantio direto?"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(336, 128)
+shape = SubResource("CircleShape2D_078p5")
+
+[node name="Enxada" type="Button" parent="."]
+offset_left = 277.0
+offset_top = 50.0
+offset_right = 325.0
+offset_bottom = 62.0
+
+[node name="Plantio direto" type="Button" parent="."]
+offset_left = 217.0
+offset_top = 71.0
+offset_right = 314.0
+offset_bottom = 86.0
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

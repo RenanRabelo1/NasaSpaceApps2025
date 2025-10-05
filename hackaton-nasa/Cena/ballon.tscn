@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://r3oi62re2u0n"]
+
+[ext_resource type="Texture2D" uid="uid://dvhggwmf8dx2b" path="res://Farm RPG FREE 16x16 - Tiny Asset Pack/Objects/Chat BalloonsBubbles - Pixel Art/All.png" id="2_q70sd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_05a31"]
+atlas = ExtResource("2_q70sd")
+region = Rect2(510, 329, 51, 47)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dnmf7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_05a31")
+}],
+"loop": false,
+"name": &"balao",
+"speed": 5.0
+}]
+
+[node name="Ballon" type="Node"]
+
+[node name="Ballon1" type="AnimatedSprite2D" parent="."]
+position = Vector2(234, 54.000004)
+scale = Vector2(1.3186275, 0.8670211)
+sprite_frames = SubResource("SpriteFrames_dnmf7")
+animation = &"balao"
+frame_progress = 0.4774449
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0

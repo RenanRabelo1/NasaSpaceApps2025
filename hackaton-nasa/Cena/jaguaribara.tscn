@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://c72dtbokrg3un"]
+[gd_scene load_steps=8 format=3 uid="uid://c72dtbokrg3un"]
 
 [ext_resource type="Texture2D" uid="uid://cytx280ho1tpn" path="res://Farm RPG FREE 16x16 - Tiny Asset Pack/Objects/Jaguaribara.png" id="1_agaw0"]
+[ext_resource type="Script" uid="uid://cpo58e21qjit7" path="res://Cena/jaguaribara.gd" id="1_r4d1b"]
 [ext_resource type="PackedScene" uid="uid://dvcusl6bg6ium" path="res://Cena/character_body_2d.tscn" id="2_emad0"]
 [ext_resource type="PackedScene" uid="uid://braruwebv2kru" path="res://Cena/arvore.tscn" id="2_f3to1"]
 [ext_resource type="PackedScene" uid="uid://c2cv0java4uuk" path="res://Cena/milho.tscn" id="3_emad0"]
@@ -10,6 +11,7 @@
 size = Vector2(68, 53)
 
 [node name="Jaguaribara" type="Node"]
+script = ExtResource("1_r4d1b")
 
 [node name="Jaguaribara" type="Sprite2D" parent="."]
 position = Vector2(-4.351139e-05, 4.529953e-06)
@@ -58,4 +60,4 @@ shape = SubResource("RectangleShape2D_f3to1")
 [node name="hud" parent="." instance=ExtResource("4_vb6qe")]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_emad0")]
-position = Vector2(-62, -37)
+position = Vector2(-70, -88)
