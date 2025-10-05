@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dr5pqnwp1y1gs"
-path="res://.godot/imported/MapaMundi.jpg-21d86b298add3e45e31dac18a9ae3498.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://Farm RPG FREE 16x16 - Tiny Asset Pack/Objects/MapaMundi.jpg"
-dest_files=["res://.godot/imported/MapaMundi.jpg-21d86b298add3e45e31dac18a9ae3498.ctex"]
 
 [params]
 

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bhgmap5nqdpce" path="res://Cena/main.gd" id="1_61g17"]
 [ext_resource type="Texture2D" uid="uid://mbkgv8wftafh" path="res://Farm RPG FREE 16x16 - Tiny Asset Pack/Tileset/Tileset Spring.png" id="1_rhtqi"]
-[ext_resource type="VideoStream" uid="uid://drghtjjhhx3aw" path="res://Farm RPG FREE 16x16 - Tiny Asset Pack/Objects/ImagemGIFundo.ogv" id="2_nnmrw"]
+[ext_resource type="VideoStream" path="res://Farm RPG FREE 16x16 - Tiny Asset Pack/Objects/ImagemGIFundo.ogv" id="2_nnmrw"]
 [ext_resource type="PackedScene" uid="uid://dvcusl6bg6ium" path="res://Cena/character_body_2d.tscn" id="2_u1akp"]
 [ext_resource type="Texture2D" uid="uid://c6da0l6n3ilp4" path="res://Farm RPG FREE 16x16 - Tiny Asset Pack/Objects/SAMPLE - Pixel Gnome Crop Pack - All x1000.png" id="3_skhdm"]
 [ext_resource type="PackedScene" uid="uid://c2cv0java4uuk" path="res://Cena/milho.tscn" id="5_l0jnj"]
@@ -3205,7 +3205,7 @@ sources/0 = SubResource("TileSetAtlasSource_nnmrw")
 sources/1 = SubResource("TileSetAtlasSource_j3ldd")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j78um"]
-size = Vector2(57, 54)
+size = Vector2(137, 62)
 
 [node name="main" type="Node"]
 script = ExtResource("1_61g17")
@@ -3257,7 +3257,7 @@ text = "FECHAR"
 position = Vector2(-579, -323)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Menu"]
-position = Vector2(1374.5, 689)
+position = Vector2(1374.5, 693)
 shape = SubResource("RectangleShape2D_j78um")
 
 [node name="arvore" parent="." instance=ExtResource("10_quusa")]

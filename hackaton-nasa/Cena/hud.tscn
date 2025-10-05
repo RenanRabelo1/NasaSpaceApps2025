@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c2kwoblext7w1"]
+[gd_scene load_steps=3 format=3 uid="uid://c2kwoblext7w1"]
 
 [ext_resource type="Texture2D" uid="uid://d4evbn810g5k7" path="res://Farm RPG FREE 16x16 - Tiny Asset Pack/Objects/Rnadom/20240707dragonHeaderA.png" id="1_hhabf"]
+[ext_resource type="FontFile" uid="uid://d0ygx76230d2d" path="res://Luckiest_Guy/LuckiestGuy-Regular.ttf" id="2_y6oou"]
 
 [node name="hud" type="CanvasLayer"]
 
@@ -14,3 +15,4 @@ offset_left = 85.0
 offset_top = 40.0
 offset_right = 238.0
 offset_bottom = 79.0
+theme_override_fonts/font = ExtResource("2_y6oou")

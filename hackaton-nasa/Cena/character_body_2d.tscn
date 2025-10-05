@@ -1,9 +1,10 @@
-[gd_scene load_steps=40 format=3 uid="uid://dvcusl6bg6ium"]
+[gd_scene load_steps=44 format=3 uid="uid://dvcusl6bg6ium"]
 
 [ext_resource type="Texture2D" uid="uid://cmdrxbjh6o3lw" path="res://Farm RPG FREE 16x16 - Tiny Asset Pack/Character/Idle.png" id="1_7e4c3"]
 [ext_resource type="Script" uid="uid://cu0s1ncw17203" path="res://Cena/character_body_2d.gd" id="1_tg0ah"]
 [ext_resource type="Texture2D" uid="uid://btw3jolul2q2w" path="res://Farm RPG FREE 16x16 - Tiny Asset Pack/Character/Walk.png" id="2_tg0ah"]
 [ext_resource type="Texture2D" uid="uid://dvhggwmf8dx2b" path="res://Farm RPG FREE 16x16 - Tiny Asset Pack/Objects/Chat BalloonsBubbles - Pixel Art/All.png" id="4_078p5"]
+[ext_resource type="FontFile" uid="uid://d0ygx76230d2d" path="res://Luckiest_Guy/LuckiestGuy-Regular.ttf" id="5_d5d8f"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_078p5"]
 atlas = ExtResource("1_7e4c3")
@@ -259,6 +260,31 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_078p5"]
 radius = 16.124516
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_jkt1b"]
+atlas = ExtResource("4_078p5")
+region = Rect2(0, 292, 76, 73)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_078p5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jkt1b")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wg1pl"]
+font_size = 25
+font_color = Color(0.011087579, 0.011087578, 0.01108758, 1)
+outline_color = Color(0, 0, 0, 1)
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_tg0ah")
 
@@ -274,11 +300,62 @@ position = Vector2(337, 127)
 shape = SubResource("CircleShape2D_7e4c3")
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+visible = false
 position = Vector2(177.4082, 41.912117)
 scale = Vector2(6.72189, 6.123919)
 sprite_frames = SubResource("SpriteFrames_d5d8f")
 
+[node name="cooldown" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+
+[node name="cooldown2" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="cooldownplantio" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="cooldownadubo" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="vouusarplantiodireto" type="Label" parent="."]
+visible = false
+offset_left = 86.0
+offset_top = -57.0
+offset_right = 263.0
+offset_bottom = 20.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 26
+text = "É melhor usar
+PLANTIO DIRETO"
+
+[node name="voceestacerto" type="Label" parent="."]
+visible = false
+offset_left = 42.0
+offset_top = -54.0
+offset_right = 334.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "Você está certo, é 
+melhor usar plantio direto"
+
+[node name="achomelhornao" type="Label" parent="."]
+visible = false
+offset_left = 51.0
+offset_top = -57.0
+offset_right = 310.0
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 26
+text = "Acho melhor não... 
+vou machucar o solo"
+
 [node name="Label1" type="Label" parent="."]
+visible = false
 offset_left = 53.0
 offset_top = -56.0
 offset_right = 356.0
@@ -288,24 +365,195 @@ theme_override_font_sizes/font_size = 26
 text = "Vamos usar enxada
  ou plantio direto?"
 
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(336, 128)
-shape = SubResource("CircleShape2D_078p5")
-
-[node name="Enxada" type="Button" parent="."]
-offset_left = 205.0
-offset_top = -49.0
-offset_right = 304.0
-offset_bottom = -25.0
-theme_override_font_sizes/font_size = 32
+[node name="qualadubodevousar" type="Label" parent="."]
+visible = false
+offset_left = 24.0
+offset_top = -38.0
+offset_right = 346.0
+offset_bottom = 58.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "Qual adubo devo usar?"
 
 [node name="Plantio direto" type="Button" parent="."]
+visible = false
 offset_left = 96.0
 offset_top = -10.0
 offset_right = 269.0
 offset_bottom = 18.0
 theme_override_font_sizes/font_size = 32
 
+[node name="Enxada" type="Button" parent="."]
+visible = false
+offset_left = 205.0
+offset_top = -49.0
+offset_right = 304.0
+offset_bottom = -25.0
+theme_override_font_sizes/font_size = 32
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(336, 128)
+shape = SubResource("CircleShape2D_078p5")
+
+[node name="explicacao_adubo" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="explicacao_adubo"]
+position = Vector2(1016.0001, 536)
+scale = Vector2(20.919409, 10.882706)
+texture = ExtResource("1_7e4c3")
+hframes = 4
+vframes = 3
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="explicacao_adubo"]
+position = Vector2(548.50006, 280)
+scale = Vector2(16.855263, 7.534247)
+sprite_frames = SubResource("SpriteFrames_078p5")
+
+[node name="Label" type="Label" parent="explicacao_adubo"]
+offset_left = 364.0
+offset_top = 115.0
+offset_right = 837.0
+offset_bottom = 220.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_d5d8f")
+theme_override_font_sizes/font_size = 19
+text = "Qual melhor Opção 
+para MANTER O SOLO SAUDÁVEL?
+"
+label_settings = SubResource("LabelSettings_wg1pl")
+
+[node name="agrotoxico" type="Button" parent="explicacao_adubo"]
+offset_left = 246.0
+offset_top = 216.0
+offset_right = 463.0
+offset_bottom = 267.0
+theme_override_fonts/font = ExtResource("5_d5d8f")
+theme_override_font_sizes/font_size = 32
+text = "AgroTÓXICO"
+
+[node name="organico" type="Button" parent="explicacao_adubo"]
+offset_left = 567.0
+offset_top = 327.0
+offset_right = 825.0
+offset_bottom = 388.0
+theme_override_fonts/font = ExtResource("5_d5d8f")
+theme_override_font_sizes/font_size = 32
+text = "Adubo orgânico"
+
+[node name="quimico" type="Button" parent="explicacao_adubo"]
+offset_left = 588.0
+offset_top = 214.0
+offset_right = 823.0
+offset_bottom = 271.0
+theme_override_fonts/font = ExtResource("5_d5d8f")
+theme_override_font_sizes/font_size = 32
+text = "ADUBO QUÍMICO"
+
+[node name="nenhum" type="Button" parent="explicacao_adubo"]
+offset_left = 237.0
+offset_top = 327.0
+offset_right = 475.0
+offset_bottom = 387.0
+theme_override_fonts/font = ExtResource("5_d5d8f")
+theme_override_font_sizes/font_size = 32
+text = "NENHUM ADUBO"
+
+[node name="explicacao_plantio_direto" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="explicacao_plantio_direto"]
+position = Vector2(1016.0001, 536)
+scale = Vector2(20.919409, 10.882706)
+texture = ExtResource("1_7e4c3")
+hframes = 4
+vframes = 3
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="explicacao_plantio_direto"]
+position = Vector2(548.50006, 280)
+scale = Vector2(16.855263, 7.534247)
+sprite_frames = SubResource("SpriteFrames_078p5")
+
+[node name="Label123" type="Label" parent="explicacao_plantio_direto"]
+offset_left = 196.0
+offset_top = 137.0
+offset_right = 973.0
+offset_bottom = 395.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_d5d8f")
+theme_override_font_sizes/font_size = 26
+text = "O plantio direto é melhor, porque machuca menos o solo, 
+melhorando a saúde dele e das plantas que crescem nele,
+aumenta a fertilidade e reduz a necessidade de máquinas
+ e energia.Essa técnica não danifica a primeira camada do
+solo, além do uso dacobertura permanente com palhada, 
+aumentando a matéria orgânica e amaior infiltração de água, 
+menor erosãoe controle natural de pragas e plantas 
+daninhas, tornando a agricultura 
+mais sustentável e produtiva."
+label_settings = SubResource("LabelSettings_wg1pl")
+
+[node name="Button" type="Button" parent="explicacao_plantio_direto"]
+offset_left = 671.0
+offset_top = 514.0
+offset_right = 887.0
+offset_bottom = 594.0
+text = "CONTINUAR JOGANDO"
+
+[node name="explicacao_errada" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="explicacao_errada"]
+position = Vector2(1016.0001, 536)
+scale = Vector2(20.919409, 10.882706)
+texture = ExtResource("1_7e4c3")
+hframes = 4
+vframes = 3
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="explicacao_errada"]
+position = Vector2(548.50006, 280)
+scale = Vector2(16.855263, 7.534247)
+sprite_frames = SubResource("SpriteFrames_078p5")
+
+[node name="Label123" type="Label" parent="explicacao_errada"]
+offset_left = 196.0
+offset_top = 126.0
+offset_right = 4066.0
+offset_bottom = 438.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_d5d8f")
+theme_override_font_sizes/font_size = 31
+text = "Na verdade, o adubo orgânico é melhor porque 
+vem de restos naturais,
+ como folhas e alimentos, e não possuem
+produtos químicos.
+Ele melhora a terra,
+ deixando-a mais rica em nutrientes. 
+Assim, as plantas crescem fortes
+e saudáveis sem prejudicar o meio ambiente.
+"
+
+[node name="Button" type="Button" parent="explicacao_errada"]
+offset_left = 671.0
+offset_top = 514.0
+offset_right = 887.0
+offset_bottom = 594.0
+text = "CONTINUAR JOGANDO"
+
+[connection signal="timeout" from="cooldown" to="." method="_on_cooldown_timeout"]
+[connection signal="timeout" from="cooldown2" to="." method="_on_cooldown_2_timeout"]
+[connection signal="timeout" from="cooldownplantio" to="." method="_on_cooldownplantio_timeout"]
+[connection signal="timeout" from="cooldownadubo" to="." method="_on_cooldownadubo_timeout"]
+[connection signal="pressed" from="Plantio direto" to="." method="_on_plantio_direto_pressed"]
+[connection signal="pressed" from="Enxada" to="." method="_on_enxada_pressed"]
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="pressed" from="explicacao_adubo/agrotoxico" to="." method="_on_agrotoxico_pressed"]
+[connection signal="pressed" from="explicacao_adubo/quimico" to="." method="_on_quimico_pressed"]
+[connection signal="pressed" from="explicacao_adubo/nenhum" to="." method="_on_nenhum_pressed"]
+[connection signal="pressed" from="explicacao_plantio_direto/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="explicacao_errada/Button" to="." method="_on_button_pressed"]

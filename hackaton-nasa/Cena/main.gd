@@ -9,12 +9,7 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
-	map()
-
-func map():
-	if Input.is_action_just_pressed("Mapa"):
-		$CharacterBody2D/Grafico.show()
-		$CharacterBody2D/Grafico/Fechar_Mapa.show()
+	pass
 
 func _on_milho_entrou() -> void:
 	$CharacterBody2D/hud/ProgressBar.value += 10

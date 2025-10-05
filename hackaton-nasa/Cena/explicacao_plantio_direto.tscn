@@ -1,0 +1,66 @@
+[gd_scene load_steps=6 format=3 uid="uid://7d17ruvpvyuk"]
+
+[ext_resource type="Script" uid="uid://dgxxf3lvdc6v4" path="res://Cena/explicacao_plantio_direto.gd" id="1_lhm8g"]
+[ext_resource type="Texture2D" uid="uid://cmdrxbjh6o3lw" path="res://Farm RPG FREE 16x16 - Tiny Asset Pack/Character/Idle.png" id="1_rogvs"]
+[ext_resource type="Texture2D" uid="uid://dvhggwmf8dx2b" path="res://Farm RPG FREE 16x16 - Tiny Asset Pack/Objects/Chat BalloonsBubbles - Pixel Art/All.png" id="2_lhm8g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jkt1b"]
+atlas = ExtResource("2_lhm8g")
+region = Rect2(0, 292, 76, 73)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a35yg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jkt1b")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[node name="ExplicacaoPlantioDireto" type="CanvasLayer"]
+script = ExtResource("1_lhm8g")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1016.0001, 536)
+scale = Vector2(20.919409, 10.882706)
+texture = ExtResource("1_rogvs")
+hframes = 4
+vframes = 3
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(512.49994, 275.5)
+scale = Vector2(17.802631, 7.657534)
+sprite_frames = SubResource("SpriteFrames_a35yg")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 760.0
+offset_top = 382.0
+offset_right = 871.0
+offset_bottom = 423.0
+text = "VOLTAR"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 134.0
+offset_top = 81.0
+offset_right = 983.0
+offset_bottom = 458.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "O plantio direto é melhor por sua abordagem de agricultura 
+conservacionista, que melhora a saúde do solo, aumenta a fertilidade, 
+conserva a água e reduz a necessidade de máquinas e energia.
+Essa técnica envolve o mínimo revolvimento do solo e a 
+cobertura permanente com palhada, aumentando a 
+matéria orgânica e a atividade biológica,
+ o que resulta em maior infiltração de água, menor erosão
+ e controle natural de pragas e plantas daninhas, tornando a
+ agricultura mais sustentável e produtiva"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
