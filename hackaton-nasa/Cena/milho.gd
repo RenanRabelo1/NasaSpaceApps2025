@@ -14,4 +14,3 @@ func _on_body_entered(_body: Node2D) -> void:
 	if (entrada==1):
 		$AnimatedSprite2D.play("trigo_crescendo")
 		emit_signal("entrou")
-	

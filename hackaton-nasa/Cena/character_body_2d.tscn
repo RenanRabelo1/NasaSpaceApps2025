@@ -327,14 +327,14 @@ one_shot = true
 
 [node name="vouusarplantiodireto" type="Label" parent="."]
 visible = false
-offset_left = 86.0
+offset_left = 71.0
 offset_top = -57.0
-offset_right = 263.0
+offset_right = 297.0
 offset_bottom = 20.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 26
-text = "É melhor usar
-PLANTIO DIRETO"
+text = "It is better to use
+NO-TILL FARMING"
 
 [node name="voceestacerto" type="Label" parent="."]
 visible = false
@@ -344,19 +344,19 @@ offset_right = 334.0
 offset_bottom = 39.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 22
-text = "Você está certo, é 
-melhor usar plantio direto"
+text = "You are right, it is better to 
+use no-till farming."
 
 [node name="achomelhornao" type="Label" parent="."]
 visible = false
-offset_left = 51.0
-offset_top = -57.0
-offset_right = 310.0
+offset_left = 33.0
+offset_top = -56.0
+offset_right = 344.0
 offset_bottom = 36.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 26
-text = "Acho melhor não... 
-vou machucar o solo"
+text = "I think it's better not to...
+ I will damage the soil."
 
 [node name="Label1" type="Label" parent="."]
 visible = false
@@ -366,44 +366,46 @@ offset_right = 356.0
 offset_bottom = 37.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 26
-text = "Vamos usar enxada
- ou plantio direto?"
+text = "Shall we use tilling
+ or no-till farming?"
 
 [node name="realmenteemelhor" type="Label" parent="."]
 visible = false
-offset_left = 42.0
-offset_top = -45.0
-offset_right = 438.0
-offset_bottom = 51.0
+offset_left = 60.0
+offset_top = -64.0
+offset_right = 456.0
+offset_bottom = 32.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
-text = "Realmente é melhor escolher
-adubo orgânico"
+text = "You're absolutely right.
+ It is better to choose 
+organic fertilizer."
 
 [node name="qualadubodevousar" type="Label" parent="."]
 visible = false
-offset_left = 24.0
-offset_top = -38.0
-offset_right = 346.0
-offset_bottom = 58.0
+offset_left = 71.0
+offset_top = -55.0
+offset_right = 460.0
+offset_bottom = 41.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 28
-text = "Qual adubo devo usar?"
+text = "Which fertilizer
+ should I use?"
 
 [node name="Plantio direto" type="Button" parent="."]
 visible = false
-offset_left = 96.0
-offset_top = -10.0
-offset_right = 269.0
-offset_bottom = 18.0
+offset_left = 95.0
+offset_top = -11.0
+offset_right = 283.0
+offset_bottom = 17.0
 theme_override_font_sizes/font_size = 32
 
 [node name="Enxada" type="Button" parent="."]
 visible = false
-offset_left = 205.0
-offset_top = -49.0
-offset_right = 304.0
-offset_bottom = -25.0
+offset_left = 208.0
+offset_top = -46.0
+offset_right = 293.0
+offset_bottom = -22.0
 theme_override_font_sizes/font_size = 32
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -428,16 +430,15 @@ scale = Vector2(16.855263, 7.534247)
 sprite_frames = SubResource("SpriteFrames_078p5")
 
 [node name="Label" type="Label" parent="explicacao_adubo"]
-offset_left = 364.0
-offset_top = 115.0
-offset_right = 837.0
-offset_bottom = 220.0
+offset_left = 252.0
+offset_top = 130.0
+offset_right = 969.0
+offset_bottom = 235.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_d5d8f")
 theme_override_font_sizes/font_size = 19
-text = "Qual melhor Opção 
-para MANTER O SOLO SAUDÁVEL?
+text = "What is the best option to KEEP THE SOIL HEALTHY?
 "
 label_settings = SubResource("LabelSettings_wg1pl")
 
@@ -448,25 +449,25 @@ offset_right = 463.0
 offset_bottom = 267.0
 theme_override_fonts/font = ExtResource("5_d5d8f")
 theme_override_font_sizes/font_size = 32
-text = "AgroTÓXICO"
+text = "Pesticide"
 
 [node name="organico" type="Button" parent="explicacao_adubo"]
-offset_left = 567.0
+offset_left = 559.0
 offset_top = 327.0
-offset_right = 825.0
+offset_right = 859.0
 offset_bottom = 388.0
 theme_override_fonts/font = ExtResource("5_d5d8f")
 theme_override_font_sizes/font_size = 32
-text = "Adubo orgânico"
+text = "Organic Fertilizar"
 
 [node name="quimico" type="Button" parent="explicacao_adubo"]
-offset_left = 588.0
-offset_top = 214.0
-offset_right = 823.0
-offset_bottom = 271.0
+offset_left = 554.0
+offset_top = 209.0
+offset_right = 869.0
+offset_bottom = 266.0
 theme_override_fonts/font = ExtResource("5_d5d8f")
 theme_override_font_sizes/font_size = 32
-text = "ADUBO QUÍMICO"
+text = "Chemical Fertilizer"
 
 [node name="nenhum" type="Button" parent="explicacao_adubo"]
 offset_left = 237.0
@@ -475,7 +476,7 @@ offset_right = 475.0
 offset_bottom = 387.0
 theme_override_fonts/font = ExtResource("5_d5d8f")
 theme_override_font_sizes/font_size = 32
-text = "NENHUM ADUBO"
+text = "No FERTILIZE"
 
 [node name="explicacao_plantio_direto" type="CanvasLayer" parent="."]
 visible = false
@@ -493,23 +494,25 @@ scale = Vector2(16.855263, 7.534247)
 sprite_frames = SubResource("SpriteFrames_078p5")
 
 [node name="Label123" type="Label" parent="explicacao_plantio_direto"]
-offset_left = 196.0
-offset_top = 137.0
-offset_right = 973.0
-offset_bottom = 395.0
+offset_left = 282.0
+offset_top = 114.0
+offset_right = 1059.0
+offset_bottom = 485.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_d5d8f")
 theme_override_font_sizes/font_size = 26
-text = "O plantio direto é melhor, porque machuca menos o solo, 
-melhorando a saúde dele e das plantas que crescem nele,
-aumenta a fertilidade e reduz a necessidade de máquinas
- e energia.Essa técnica não danifica a primeira camada do
-solo, além do uso dacobertura permanente com palhada, 
-aumentando a matéria orgânica e amaior infiltração de água, 
-menor erosãoe controle natural de pragas e plantas 
-daninhas, tornando a agricultura 
-mais sustentável e produtiva."
+text = "No-till farming is better because it causes 
+less damage to the soil, improving its health
+and the health of the plants growing in it. It
+increases fertility and reduces the need for 
+machinery and energy.  This technique does 
+not damage the topsoil layer and, combined 
+with the use of permanent straw mulch,
+ increases organic matter and water infiltration.
+ It also reduces erosion and provides natural 
+control of pests and weeds, making agriculture 
+more sustainable and productive."
 label_settings = SubResource("LabelSettings_wg1pl")
 
 [node name="Button" type="Button" parent="explicacao_plantio_direto"]
@@ -517,7 +520,7 @@ offset_left = 671.0
 offset_top = 514.0
 offset_right = 887.0
 offset_bottom = 594.0
-text = "CONTINUAR JOGANDO"
+text = "CONTINUE"
 
 [node name="explicacao_errada" type="CanvasLayer" parent="."]
 visible = false
@@ -535,30 +538,31 @@ scale = Vector2(16.855263, 7.534247)
 sprite_frames = SubResource("SpriteFrames_078p5")
 
 [node name="Label123" type="Label" parent="explicacao_errada"]
-offset_left = 196.0
-offset_top = 126.0
-offset_right = 4066.0
-offset_bottom = 438.0
+offset_left = 319.0
+offset_top = 102.0
+offset_right = 4189.0
+offset_bottom = 449.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_d5d8f")
-theme_override_font_sizes/font_size = 31
-text = "Na verdade, o adubo orgânico é melhor porque 
-vem de restos naturais,
- como folhas e alimentos, e não possuem
-produtos químicos.
-Ele melhora a terra,
- deixando-a mais rica em nutrientes. 
-Assim, as plantas crescem fortes
-e saudáveis sem prejudicar o meio ambiente.
-"
+theme_override_font_sizes/font_size = 30
+text = "Organic fertilizer is better because
+ it comes from 
+natural waste, such as leaves and
+food scraps, and
+contains no chemicals. 
+It improves the soil, making
+it richer in nutrients. As a result,
+ plants grow strong 
+and healthy without 
+harming the environment."
 
 [node name="Button" type="Button" parent="explicacao_errada"]
 offset_left = 671.0
 offset_top = 514.0
 offset_right = 887.0
 offset_bottom = 594.0
-text = "CONTINUAR JOGANDO"
+text = "CONTINUE"
 
 [connection signal="timeout" from="cooldown" to="." method="_on_cooldown_timeout"]
 [connection signal="timeout" from="cooldown2" to="." method="_on_cooldown_2_timeout"]

@@ -3257,7 +3257,7 @@ text = "FECHAR"
 position = Vector2(-579, -323)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Menu"]
-position = Vector2(1374.5, 693)
+position = Vector2(1509, 709)
 shape = SubResource("RectangleShape2D_j78um")
 
 [node name="arvore" parent="." instance=ExtResource("10_quusa")]
